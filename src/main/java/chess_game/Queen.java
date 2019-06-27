@@ -6,18 +6,23 @@ package chess_game;
  */
 public class Queen extends Piece {
 
+    public Queen() {
+        this.position = new Position(4, 4);
+    }
+
     @Override
     public boolean isValidMove(Position newPosition) {
-        if (super.isValidMove(newPosition)) {
-            if (newPosition.row == this.position.row || newPosition.column == this.position.column
-                    || (Math.abs(newPosition.row - this.position.row) == Math.abs(newPosition.column - this.position.column))) {
-                return true;
-            } else {
-                System.out.println("Wrong position, queen can't move there");
-                return false;
-            }
+
+        //checking the board bounds
+        if (!super.isValidMove(newPosition)) {
+            return false;
+        }
+
+        //checking specific movement conditions for queen
+        if (newPosition.row == this.position.row || newPosition.column == this.position.column
+                || (Math.abs(newPosition.row - this.position.row) == Math.abs(newPosition.column - this.position.column))) {
+            return true;
         } else {
-            System.out.println("Invalid range, you are outside the chess board (range 0-7)");
             return false;
         }
     }
