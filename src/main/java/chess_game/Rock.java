@@ -10,6 +10,7 @@ public class Rock extends Piece {
         this.position = new Position(0, 4);
     }
 
+    @Override
     public boolean isValidMove(Position newPosition) {
         if (newPosition.row == this.position.row || newPosition.column == this.position.column) {
             return true;

@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         Queen queen = new Queen();
-        Position testPosition = new Position(3, 2);
+        Position testPosition = new Position(7, 7);
 
         if (queen.isValidMove(testPosition)) {
             System.out.println("Can move there");
