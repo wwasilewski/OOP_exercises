@@ -29,11 +29,11 @@ public class Dog extends Animal implements Speakable, Moveable {
 
     @Override
     public void start() {
-        System.out.println("Dog " + getName() + " runs");
+        System.out.println(getType() + " " + getName() + " runs");
     }
 
     @Override
     public void stop() {
-        System.out.println("Dog " + getName() + " stops");
+        System.out.println(getType() + " " + getName() + " stops");
     }
 }
