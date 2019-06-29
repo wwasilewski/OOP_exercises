@@ -4,7 +4,7 @@ package abstractclass_example;
  * @author Wojciech Wasilewski
  * @date Created on 29.06.2019
  */
-public class Animal {
+public abstract class Animal {
 
     private String name = "no_name";
 
@@ -15,19 +15,16 @@ public class Animal {
         this.name = name;
     }
 
-    String getType() {
-        return "Some animal";
-    }
+    //abstract method because i will not be able to instantiate abstract Animal class
+    public abstract String getType();
 
-    String getName() {
+    public abstract String getVoice();
+
+    public String getName() {
         return name;
     }
 
-    String getVoice() {
-        return "???";
-    }
-
-    void speak() {
+    public void speak() {
         System.out.println(getType() + " " + getName() + " says " + getVoice());
     }
 }
