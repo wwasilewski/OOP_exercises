@@ -15,8 +15,22 @@ public class Main {
         people[2] = new Student("Tomasz M", "Informatics");
         people[3] = new Student("Marta K", "Sleeping");
 
+        System.out.println("Persons(employees) before raise: ");
+
+        //loop to show all persons
         for (Person p : people) {
             System.out.println(p.getName() + ", " + p.getDescription());
+        }
+
+        System.out.println();
+        System.out.println("After 10% raise: ");
+
+        //loop to give employees 10% raise
+        for (Person employees : people) {
+            if (employees instanceof Employee) {
+                ((Employee) employees).raiseSalary(10);
+                System.out.println(employees.getName() + ", " + employees.getDescription());
+            }
         }
     }
 }
