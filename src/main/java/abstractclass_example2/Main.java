@@ -10,14 +10,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //list of all persons
-        ArrayList<Person> listOfPersons = new ArrayList<>();
+        //list of all persons with initialCapacity=5
+        ArrayList<Person> listOfPersons = new ArrayList<>(5);
         listOfPersons.add(new Employee("Wojtek W", 20000d, 2019, 02, 22));
         listOfPersons.add(new Employee("Anna B", 10000d, 2019, 03, 12));
         listOfPersons.add(new Student("Tomasz M", "Informatics"));
         listOfPersons.add(new Student("Marta K", "Sleeping"));
 
-        System.out.println("List of persons: ");
+        System.out.println("List of persons (employees and students): ");
 
         //loop to show all persons
         for (Person p : listOfPersons) {
