@@ -17,6 +17,7 @@ public class Main {
 
         String input = sc.next().toUpperCase();
 
+        //validating user's enum input
         if (EnumUtils.isValidEnum(Size.class, input)) {
             Size size = Enum.valueOf(Size.class, input);
             System.out.println("Your size: " + size);
