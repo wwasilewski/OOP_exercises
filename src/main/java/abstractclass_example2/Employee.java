@@ -27,7 +27,7 @@ public class Employee extends Person {
 
     @Override
     public String getDescription() {
-        return String.format("Employee earnings1 %.2f PLN", salary);
+        return String.format("Employee earnings %.2f PLN", salary);
     }
 
     public void raiseSalary(double byPercent) {
