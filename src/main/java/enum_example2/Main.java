@@ -10,14 +10,12 @@ import java.util.Scanner;
  */
 public class Main {
 
-    public static void main(String[] args) {
-
+    public static void print() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your size (SMALL, MEDIUM, LARGE, EXTRA_LARGE): ");
-        String input = "";
+        String input;
 
         while (true) {
-
             try {
                 input = sc.nextLine().toUpperCase();
 
@@ -39,5 +37,10 @@ public class Main {
             }
         }
         sc.close();
+    }
+
+    public static void main(String[] args) {
+
+        print();
     }
 }
