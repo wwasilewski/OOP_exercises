@@ -11,5 +11,7 @@ public class Main {
         Drawable drawable = new Rectangle();
         drawable.draw();
         System.out.println("3 cubed: " + Drawable.countNumberCubed(3));
+        drawable.move();
+        drawable.print();
     }
 }

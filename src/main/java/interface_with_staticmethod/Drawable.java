@@ -4,7 +4,8 @@ package interface_with_staticmethod;
  * @author Wojciech Wasilewski
  * @date Created on 07.07.2019
  */
-public interface Drawable {
+//interface can extend many interfaces
+public interface Drawable extends Movable, Printable {
 
     void draw();
 
