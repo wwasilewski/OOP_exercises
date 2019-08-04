@@ -11,29 +11,33 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Map<Integer, String> myMap = new HashMap<>();
+        Map<Integer, String> myHashMap = new HashMap<>();
 
-        myMap.put(1, "one");
-        myMap.put(2, "two");
-        myMap.put(3, "three");
-        myMap.put(4, "four");
+        myHashMap.put(1, "one");
+        myHashMap.put(2, "two");
+        myHashMap.put(3, "three");
+        myHashMap.put(4, "four");
 
-        for (Map.Entry<Integer, String> x : myMap.entrySet()) {
+        for (Map.Entry<Integer, String> x : myHashMap.entrySet()) {
             System.out.println("key: " + x.getKey() + " value: " + x.getValue());
         }
+        System.out.println("----------------------------------------------------");
 
-        myMap.replace(3, "changing 'three' to 33333");
+        myHashMap.replace(3, "changing 'three' to 33333");
 
-        for (Map.Entry<Integer, String> x : myMap.entrySet()) {
+        for (Map.Entry<Integer, String> x : myHashMap.entrySet()) {
             System.out.println("key: " + x.getKey() + " value: " + x.getValue());
         }
+        System.out.println("----------------------------------------------------");
 
-        myMap.remove(1);
 
-        for (Map.Entry<Integer, String> x : myMap.entrySet()) {
+        myHashMap.remove(1);
+
+        for (Map.Entry<Integer, String> x : myHashMap.entrySet()) {
             System.out.println("key: " + x.getKey() + " value: " + x.getValue());
         }
+        System.out.println("----------------------------------------------------");
 
-        System.out.println("value for key 4 is: " + myMap.get(4));
+        System.out.println("value for key 4 is: " + myHashMap.get(4));
     }
 }
