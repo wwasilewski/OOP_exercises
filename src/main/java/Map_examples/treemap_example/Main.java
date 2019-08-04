@@ -1,4 +1,4 @@
-package treemap_example;
+package Map_examples.treemap_example;
 
 import java.util.Map;
 import java.util.TreeMap;
